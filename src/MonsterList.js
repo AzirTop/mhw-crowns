@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
-import { motion, AnimatePresence } from "framer-motion";
 
 const initialMonsters = [
   ["Chatacabra", false, false, false, false],
@@ -44,14 +43,10 @@ const MonsterList = () => {
     return initialMonsters;
   });
 
-  const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
     Cookies.set("monsters", JSON.stringify(monsters), { expires: 7 });
 
-    if (monsters.every(monster => monster[1] && monster[2])) {
-      setShowAnimation(true);
-    }
   }, [monsters]);
 
   const toggleMonsterState = (index, actionIndex) => {
