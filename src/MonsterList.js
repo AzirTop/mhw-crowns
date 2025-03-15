@@ -73,7 +73,7 @@ const MonsterList = () => {
               {[1, 2].map(actionIndex => (
                 <button
                   key={actionIndex}
-                  className="px-2 py-1 rounded-lg relative"
+                  className="px-3 py-2 rounded-lg relative"
                   onClick={() => toggleMonsterState(index, actionIndex)}
                 >
                   <img 
@@ -88,7 +88,7 @@ const MonsterList = () => {
               {[3, 4].map(actionIndex => (
                 <button
                   key={actionIndex}
-                  className="px-2 py-1 rounded-lg relative"
+                  className="px-3 py-2 rounded-lg relative"
                   onClick={() => toggleMonsterState(index, actionIndex)}
                 >
                   <img 
